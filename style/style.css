@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan&display=swap");
+
+:root {
+  --dark--gray: #a1a1a1;
+  --black--color: #000;
+  --white--color: #fff;
+  --very--dark--gray: #454545;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+a,
+li {
+  list-style-type: none;
+  color: var(--white--color);
+  text-decoration: none;
+  font-size: 600;
+}
+body {
+  font-family: "League Spartan", sans-serif;
+}
+.first__section {
+  height: 70vh;
+  display: flex;
+}
+.about__image {
+  flex: 1;
+}
+.nav {
+  display: flex;
+  height: 15vh;
+  align-items: center;
+  padding-left: 10%;
+}
+
+.nav li:nth-child(1) {
+  color: var(--white--color);
+  font-size: 2.5rem;
+  margin-bottom: 5px;
+  margin-right: 4rem;
+}
+.nav li a {
+  font-size: 1.2rem;
+  margin-right: 2rem;
+}
+.nav li:last-child a {
+  margin-right: 0;
+}
+.image__slider {
+  background-image: url("/images/desktop-image-hero-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex: 1.4;
+}
+.about__image,
+.parent__el {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__title {
+  font-size: 3rem;
+  margin-bottom: 3rem;
+}
+.about__text {
+  color: var(--dark--gray);
+  font-size: 1.1rem;
+  line-height: 25px;
+}
+
+.about__title,
+.about__text,
+.about__image a {
+  width: 67%;
+  position: relative;
+  right: 1rem;
+}
+.about__image a {
+  color: var(--black--color);
+  margin-top: 2rem;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1rem;
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  transition: all 0.5s ease;
+}
+.about__image a:hover {
+  color: var(--dark--gray);
+}
+.about__image span {
+  font-size: 2rem;
+  margin-bottom: 6px;
+}
+.btns {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+}
+
+.btns button {
+  padding: 0.95rem;
+  border: none;
+  color: var(--white--color);
+  background: var(--black--color);
+  font-size: 2rem;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+
+.btns button:hover {
+  background: var(--very--dark--gray);
+}
+
+/* SECOND SECTION */
+.second__section {
+  display: flex;
+  height: 30vh;
+}
+.first__image,
+.second__image {
+  height: 100;
+  flex: 1;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.first__image {
+  background-image: url("/images/image-about-dark.jpg");
+  flex: 0.85;
+}
+.second__image {
+  background-image: url("/images/image-about-light.jpg");
+}
+.second__section--text {
+  flex: 1.2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.second__section--text h3,
+.second__section--text p {
+  width: 80%;
+}
+.second__section--text h3 {
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-size: 1.3rem;
+}
+.second__section--text p {
+  color: var(--dark--gray);
+  line-height: 20px;
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 1151px) {
+  .about__title,
+  .about__text,
+  .about__image a {
+    width: 80%;
+  }
+  .about__title {
+    margin-bottom: 1rem;
+  }
+  .about__image a {
+    margin-top: 0.5rem;
+  }
+  .second__section--text h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media screen and (max-width: 968px) {
+  .first__section {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .btns {
+    bottom: 100%;
+    right: 0;
+    left: auto;
+  }
+  .about__title,
+  .about__text,
+  .about__image a {
+    width: 60%;
+    right: 0;
+    left: 2rem;
+  }
+  .second__section {
+    flex-direction: column;
+    height: 100vh;
+  }
+  .second__section--text {
+    flex: 2;
+  }
+  .second__section--text h3,
+  .second__section--text p {
+    width: 60%;
+  }
+  .first__image {
+    flex: 2;
+  }
+  .second__image {
+    flex: 2;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__title {
+    font-size: 2rem;
+  }
+  .about__text {
+    font-size: 0.9rem;
+  }
+  .about__title,
+  .about__text,
+  .about__image a {
+    width: 80%;
+    left: 0;
+  }
+  .second__section--text h3,
+  .second__section--text p {
+    width: 80%;
+  }
+  .nav li {
+    opacity: 0;
+  }
+}
