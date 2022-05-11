@@ -13,10 +13,10 @@
 }
 a,
 li {
-  list-style-type: none;
-  color: var(--white--color);
-  text-decoration: none;
-  font-size: 600;
+  list-style-type: none !important;
+  color: var(--white--color) !important;
+  text-decoration: none !important;
+  font-size: 600 !important;
 }
 body {
   font-family: "League Spartan", sans-serif;
@@ -28,24 +28,17 @@ body {
 .about__image {
   flex: 1;
 }
-.nav {
-  display: flex;
-  height: 15vh;
-  align-items: center;
-  padding-left: 10%;
-}
 
-.nav li:nth-child(1) {
+.nav_ h1 {
   color: var(--white--color);
   font-size: 2.5rem;
-  margin-bottom: 5px;
   margin-right: 4rem;
 }
-.nav li a {
+.nav_ li a {
   font-size: 1.2rem;
   margin-right: 2rem;
 }
-.nav li:last-child a {
+.nav_ li:last-child a {
   margin-right: 0;
 }
 .image__slider {
@@ -214,6 +207,28 @@ body {
     flex: 2;
   }
 }
+@media screen and (max-width: 768px) {
+  .nav_ span {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255,1 ' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+  }
+  .navbar-dark .navbar-toggler {
+    border-color: white !important;
+  }
+  .navbar__colapse {
+    background: white !important;
+    position: absolute;
+    left: 0;
+    top: 9vh;
+    width: 100%;
+    text-align: center;
+  }
+  .nav_ li:last-child a {
+    margin-right: 2rem;
+  }
+  .navbar__colapse a {
+    color: var(--black--color) !important;
+  }
+}
 @media screen and (max-width: 480px) {
   .about__title {
     font-size: 2rem;
@@ -230,8 +245,5 @@ body {
   .second__section--text h3,
   .second__section--text p {
     width: 80%;
-  }
-  .nav li {
-    opacity: 0;
   }
 }

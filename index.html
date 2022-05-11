@@ -6,6 +6,13 @@
 
     <title>Room homepage</title>
 
+    <!-- BOOTSTRAP -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
     <!-- Style -->
     <link rel="stylesheet" href="./style/style.css" />
   </head>
@@ -15,13 +22,38 @@
       <section class="first__section">
         <!-- NAV -->
         <div class="image__slider">
-          <ul class="nav">
-            <li>room</li>
-            <li><a href="#">home</a></li>
-            <li><a href="#">shop</a></li>
-            <li><a href="#">about</a></li>
-            <li><a href="#">contact</a></li>
-          </ul>
+          <nav class="navbar bg-transparent navbar-dark navbar-expand-md nav_">
+            <div class="container">
+              <h1 class="navbar-brand">room</h1>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div
+                class="collapse navbar-collapse navbar__colapse"
+                id="navmenu"
+              >
+                <ul class="navbar-nav ms-auto text-black">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">shop</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">about</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">contact</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
         </div>
         <div class="about__image">
           <div class="parent__el">
@@ -60,6 +92,8 @@
       </section>
     </main>
 
+    <!--  -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <!-- JS -->
     <script src="./js/app.js"></script>
   </body>
